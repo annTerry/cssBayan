@@ -1,0 +1,61 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+section {
+    display: flex;
+    flex-direction: column;
+}
+h2 {
+    margin-block-start: 0;
+    margin-block-end: 0;    
+}
+input[type='radio'] {
+    opacity: 0;
+    width:1px;
+    height:1px;
+}
+.mem-content {
+    overflow: hidden;
+    max-height: 0;
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    cursor:pointer;
+}
+label div.header{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;    
+}
+
+div.header div.sign {
+    width:1.2rem;
+    height:1.2rem;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-image: url("./icons/accordion.svg");
+    background-size: 1.2rem;
+    transition: 1s;    
+}
+
+label:hover div.header div.sign{
+    transform: rotateX(180deg);
+    transition: 1s;    
+}
+
+#FirstImage:checked ~ label .mem-content.first-mem {
+  max-height: fit-content;
+  transition: 1s;
+}
+#SecondImage:checked ~ label .mem-content.second-mem {
+    max-height: fit-content;
+    transition: 1s;
+  }
