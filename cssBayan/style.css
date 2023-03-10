@@ -7,36 +7,7 @@ section {
     display: flex;
     flex-direction: column;
 }
-h2 {
-    margin-block-start: 0;
-    margin-block-end: 0;    
-}
-input[type='radio'] {
-    opacity: 0;
-    width:1px;
-    height:1px;
-}
-.mem-content {
-    overflow: hidden;
-    max-height: 0;
-    transition: 1s;
-    display: flex;
-    justify-content: center;
-}
-
-label {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;    
-    cursor:pointer;
-}
-label div.header{
-    width: 100%;
-    display: flex;
-    justify-content:space-between;    
-}
-
-div.header div.sign {
+section div.header div.sign {
     width:1.2rem;
     height:1.2rem;
     background-repeat: no-repeat;
@@ -44,18 +15,62 @@ div.header div.sign {
     background-image: url("./icons/accordion.svg");
     background-size: 1.2rem;
     transition: 1s;    
+    opacity:0;
 }
 
-label:hover div.header div.sign{
-    transform: rotateX(180deg);
+h2 {
+    margin-block-start: 0;
+    margin-block-end: 0;    
+}
+
+section:hover h2 {
+    color: darkgreen;
+}
+input[type='radio'] {
+    opacity: 0;
+    width:1px;
+    height:1px;
+}
+.mem-content {
+    overflow: hidden;        
+    flex-basis: 0;    
+    display: flex;
+    justify-content: center;
+    transition: 1s;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    cursor:pointer;
+    min-height: 1.2rem;
+}
+label div.header{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;    
+}
+
+section:hover div.header div.sign {
+    opacity: 1;
     transition: 1s;    
 }
 
-#FirstImage:checked ~ label .mem-content.first-mem {
-  max-height: fit-content;
-  transition: 1s;
+section:hover label:hover div.header div.sign{
+    transform: rotate(-90deg);
+    transition: 1s;    
 }
-#SecondImage:checked ~ label .mem-content.second-mem {
-    max-height: fit-content;
+
+.first-image-wrapper:hover div.mem-content.first-mem, 
+.second-image-wrapper:hover div.mem-content.second-mem,
+.third-image-wrapper:hover div.mem-content.third-mem,
+.fourth-image-wrapper:hover div.mem-content.fourth-mem,
+#FirstImage:checked ~ label div.mem-content.first-mem,
+#SecondImage:checked ~ label div.mem-content.second-mem,
+#ThirdImage:checked ~ label div.mem-content.third-mem,
+#FourthImage:checked ~ label div.mem-content.fourth-mem
+{
+    flex-basis: auto;
     transition: 1s;
-  }
+}
