@@ -32,10 +32,11 @@ input[type='radio'] {
     height:1px;
 }
 .mem-content {
-    overflow: hidden;        
-    flex-basis: 0;    
+    overflow: hidden;    
+    transform: scale(1);
     display: flex;
     justify-content: center;
+    max-height:0;
     transition: 1s;
 }
 
@@ -70,7 +71,8 @@ section:hover label:hover div.header div.sign{
 #SecondImage:checked ~ label div.mem-content.second-mem,
 #ThirdImage:checked ~ label div.mem-content.third-mem,
 #FourthImage:checked ~ label div.mem-content.fourth-mem
-{
-    flex-basis: auto;
-    transition: 1s;
+{    
+    transform: scale(1);
+    transition: 1s;   
+    max-height:100vh; 
 }
