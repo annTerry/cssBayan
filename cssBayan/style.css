@@ -101,7 +101,7 @@ section:active div.header {
     max-height:100vh; 
 }
 
-section:active label:active div.sign
+section:active label:active div.sign,
 #FirstImage:checked ~ label.first-image-wrapper div.header div.sign,
 #SecondImage:checked ~ label.second-image-wrapper div.header div.sign,
 #ThirdImage:checked ~ label.third-image-wrapper div.header div.sign,
