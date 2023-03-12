@@ -16,10 +16,6 @@ section {
 section div.header div.sign {
     width:1.5rem;
     height:1.5rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url("./icons/accordion.svg");
-    background-size: 1.5rem;
     transition: 1s;    
     opacity: 0;    
 }
@@ -65,6 +61,7 @@ label {
     justify-content: center;    
     cursor:pointer;
     min-height: 1.2rem;
+    border-top: 0.3em solid rgb(177, 252, 177);
 }
 
 label div.header {
@@ -88,14 +85,14 @@ section:active div.header div.sign {
 }
 
 section:active div.header {
-    background-color: rgb(155, 248, 127);
+    background-color: transparent;
     transition: 1s; 
 }
 
 .first-image-wrapper:active div.mem-content.first-mem, 
 .second-image-wrapper:active div.mem-content.second-mem,
 .third-image-wrapper:active div.mem-content.third-mem,
-.fourth-image-wrapper:active div.mem-content.fourth-mem,
+.fourth-image-wrapper:active div.mem-content.fourth-mem, 
 #FirstImage:checked ~ label div.mem-content.first-mem,
 #SecondImage:checked ~ label div.mem-content.second-mem,
 #ThirdImage:checked ~ label div.mem-content.third-mem,
@@ -114,6 +111,14 @@ section:active label:active div.sign,
 {
     transform: rotate(90deg);
     transition: 1s;    
+}
+
+div.sign svg {
+  fill: black;
+  stroke: black;
+  transition: 1s;  
+  width:1.5rem;
+  height:1.5rem;
 }
 
 @media (hover:hover) {
@@ -159,4 +164,25 @@ section:active label:active div.sign,
     body {
     font-size: 1.2rem;
   }
+}
+
+label:active div.header div.sign {
+  transform: rotate(180deg);
+  transition: 1s;    
+}
+
+label:active div.header div.sign svg {
+  fill: white;
+  stroke: white;
+  transition: 1s;      
+}
+
+label:active div.header {
+  background-color: rgb(153, 185, 245);
+  transition: 1s;    
+}
+
+label:active div.header h2 {
+  color: rgb(12, 92, 240);
+  transition: 1s;    
 }
