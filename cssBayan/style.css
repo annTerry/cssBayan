@@ -27,7 +27,8 @@ section div.header div.sign {
 h2 {
     font-size: 1.2em;
     margin-block-start: 0;
-    margin-block-end: 0;    
+    margin-block-end: 0;  
+    transition: color 1s;   
 }
 
 h1 {
@@ -38,7 +39,8 @@ h1 {
 }
 
 section:active h2 {
-    color: rgb(12, 88, 12);    
+    color: rgb(12, 88, 12);  
+    transition: 1s;   
 }
 
 input[type='radio'] {
@@ -54,7 +56,7 @@ input[type='radio'] {
     justify-content: center;
     max-height:0;
     margin: 0 10%;
-    transition: 1s;
+    transition: 1s;    
 }
 
 label {
@@ -71,10 +73,12 @@ label div.header {
     justify-content: space-between;
     align-items: center;
     padding: 0.25rem 0.5rem;
+    transition: background-color 1s; 
 }
 
 img {
     max-width: 50rem;
+    padding: 0.5em;
     width: 100%;
 }
 
@@ -85,6 +89,7 @@ section:active div.header div.sign {
 
 section:active div.header {
     background-color: rgb(155, 248, 127);
+    transition: 1s; 
 }
 
 .first-image-wrapper:active div.mem-content.first-mem, 
@@ -115,6 +120,7 @@ section:active label:active div.sign,
 
   section:hover h2 {
     color: rgb(12, 88, 12);    
+    transition: 1s; 
   }
 
   section:hover div.header div.sign {
@@ -124,6 +130,7 @@ section:active label:active div.sign,
 
   section:hover div.header {
     background-color: rgb(155, 248, 127);
+    transition: 1s; 
   }
 
   section:hover label:hover div.sign {
